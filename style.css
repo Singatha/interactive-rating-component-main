@@ -1,0 +1,154 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --bg-button: #2f363dff;
+    /* Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+
+    /* Typography */
+
+    /* Body Copy */
+    --fs-tiny: 12px;
+    --fs-small: 14px;
+    --fs-normal: 15px;
+    --fs-large: 18px;
+
+    /* Font */
+    --ff: "Overpass";
+    
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    height: 370px;
+    max-width: 390px;
+    padding: 35px;
+    position: relative;
+    width: 100%;
+}
+
+#rating-state {
+    position: absolute;
+    z-index: 1;
+}
+
+#rating-state img {
+    background-color: var(--bg-button);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+h2, p {
+    font-family: var(--ff);
+}
+
+h2 {
+    color: var(--white);
+}
+
+p {
+    color: var(--light-grey);
+    margin: 0 0 30px;
+    width: 320px;
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 310px;
+}
+
+.rating-buttons button{
+    background-color: var(--bg-button);
+    border: none;
+    border-radius: 50%;
+    color: var(--light-grey);
+    font-family: var(--ff);
+    padding: 10px 15px;
+}
+
+.rating-buttons button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+#submit-button {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 50px;
+    color: var(--white);
+    font-family: var(--ff);
+    margin: 20px auto 0;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 316px;
+}
+
+#submit-button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+#thank-you-state {
+    visibility: hidden;
+}
+
+#thank-you-state img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.orange {
+    background-color: var(--very-dark-blue);
+    border-radius: 20px;
+    color: var(--orange);
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+}
+
+.center {
+    text-align: center;
+}
+
+@media screen and (min-width: 700px){
+    .container {
+        max-width: 410px;
+        padding: 30px;
+    }
+
+    #rating-state {
+        width: 350px;
+    }
+
+    .rating-buttons {
+        width: 340px;
+    }
+
+    #submit-button {
+        width: 340px;
+    }
+}
